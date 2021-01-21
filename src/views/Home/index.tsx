@@ -1,8 +1,27 @@
 import { defineComponent } from "vue";
-import config from "../../../config/index"; // 路径配置
+import { getHomeListApi } from "./serve";
 export default defineComponent({
   setup() {
-    console.log(config.baseURL);
-    return () => <div class="Home">Home</div>;
+    // const fetchApi = this.$http.getHomeList();
+    const clickHandle = () => {
+      console.log("a");
+    };
+    return {
+      clickHandle
+    };
+  },
+  methods: {
+    async getHomeList() {
+      const res = await getHomeListApi({ name: "1" });
+      console.log(res);
+    }
+  },
+  render() {
+    const { clickHandle } = this;
+    return (
+      <div onClick={clickHandle}>
+        <el-button>默认按钮</el-button>
+      </div>
+    );
   }
 });

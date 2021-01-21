@@ -1,14 +1,16 @@
 // 一些全局的config配置
-interface ImodeUrl {
+type NodeEnvType = "production" | "development" | "test";
+
+interface ModeUrlType {
   baseURL: string;
   authBaseURL: string;
 }
-interface ImodeUrlObj {
-  production: ImodeUrl;
-  development: ImodeUrl;
-  test: ImodeUrl;
+interface ModeUrlObjType {
+  production: ModeUrlType;
+  development: ModeUrlType;
+  test: ModeUrlType;
 }
-const modeUrlObj: ImodeUrlObj = {
+const modeUrlObj: ModeUrlObjType = {
   // 生产环境
   production: {
     baseURL: "http://cloud.huan.tv",
@@ -25,5 +27,5 @@ const modeUrlObj: ImodeUrlObj = {
     authBaseURL: ""
   }
 };
-const NODE_ENV: "production" | "development" | "test" = process.env.NODE_ENV;
+const NODE_ENV: NodeEnvType = process.env.NODE_ENV as NodeEnvType;
 export default modeUrlObj[NODE_ENV];

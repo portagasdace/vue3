@@ -20,7 +20,7 @@ export default defineComponent({
     const { clickHandle } = this;
     return (
       <div onClick={clickHandle}>
-        <el-button>默认按钮</el-button>
+        <el-button>观众-节目</el-button>
       </div>
     );
   }

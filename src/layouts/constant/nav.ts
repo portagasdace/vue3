@@ -34,32 +34,31 @@ export default [
   },
   {
     name: "观众分析",
-    key: "/audience",
+    key: "audience",
     icon: {
       default: audienceIcon,
       choose: audienceChooseIcon
     },
     children: [
       {
-        name: "观众分析-1",
-        key: "/audiences",
-        path: "/a"
+        name: "节目榜单",
+        key: "/audience-program",
+        path: "/audience-program"
       }
     ]
   },
   {
     name: "平台分析",
-    key: "/platform",
+    key: "platform",
     icon: {
       default: platformIcon,
       choose: platformChooseIcon
     },
-    path: "/platform",
     children: [
       {
-        name: "平台分析-1",
-        key: "/audience-1",
-        path: "/b"
+        name: "节目榜单",
+        key: "/platform-program",
+        path: "/platform-program"
       }
     ]
   }

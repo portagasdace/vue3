@@ -1,6 +1,7 @@
 import { defineComponent } from "vue";
 import Header from "./component/header";
 import Aside from "./component/aside";
+import LayoutConfig from "./constant/config";
 
 import "./index.scss";
 
@@ -12,11 +13,13 @@ export default defineComponent({
           <Header />
         </el-header>
         <el-container>
-          <el-aside width="200px">
+          <el-aside width={LayoutConfig.asideWidth}>
             <Aside />
           </el-aside>
           <el-main>
-            <el-button type="primary">主要按钮</el-button>
+            <div class="main-content">
+              <router-view />
+            </div>
           </el-main>
         </el-container>
       </el-container>

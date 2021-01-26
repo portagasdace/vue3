@@ -8,14 +8,14 @@
 import path from "path";
 //
 module.exports = {
-  devServer: {
-    proxy: {
-      "/api": {
-        target: "http://localhost:8080",
-        changeOrigin: true
-      }
-    }
-  },
+  // devServer: {
+  //   proxy: {
+  //     "/api": {
+  //       target: "http://localhost:8080",
+  //       changeOrigin: true
+  //     }
+  //   }
+  // },
   outputDir: "dist",
   // webpack-merge 合并到最终的配置中
   configureWebpack: {

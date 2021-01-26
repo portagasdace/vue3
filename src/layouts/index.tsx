@@ -1,7 +1,7 @@
 import { defineComponent } from "vue";
 import Header from "./component/header";
 import Aside from "./component/aside";
-import LayoutConfig from "./constant/config";
+import LayoutConfig from "../../config/layout";
 
 import "./index.scss";
 

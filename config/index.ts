@@ -13,17 +13,17 @@ interface ModeUrlObjType {
 const modeUrlObj: ModeUrlObjType = {
   // 生产环境
   production: {
-    baseURL: "http://cloud.huan.tv",
+    baseURL: "http://cloud.huan.tv/ott-analytics-api-v2",
     authBaseURL: ""
   },
   // 开发环境
   development: {
-    baseURL: "http://cloud.huan.tv",
+    baseURL: "http://cloud.huan.tv/ott-analytics-api-v2",
     authBaseURL: ""
   },
   // 测试环境
   test: {
-    baseURL: "http://cloud.huan.tv/test",
+    baseURL: "http://cloud.huan.tv/ott-analytics-api-v2",
     authBaseURL: ""
   }
 };

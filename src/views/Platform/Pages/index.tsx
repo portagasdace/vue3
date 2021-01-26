@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import { getHomeListApi } from "./serve";
+import { getHomeListApi } from "../serve";
 export default defineComponent({
   setup() {
     // const fetchApi = this.$http.getHomeList();

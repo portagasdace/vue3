@@ -1,8 +1,7 @@
 import { defineComponent, ref } from "vue";
 import { onBeforeRouteUpdate, useRoute } from "vue-router";
-import MENU_LIST, { MenuItemType } from "../constant/nav";
 
-import LayoutConfig from "../constant/config";
+import LayoutConfig, { MenuItemType } from "../../../config/layout";
 
 export default defineComponent({
   setup() {
@@ -20,7 +19,8 @@ export default defineComponent({
   methods: {
     processingPath({ key, icon }: MenuItemType) {
       const { activeMenu } = this;
-      if (activeMenu === key) {
+      console.log(activeMenu, key);
+      if (activeMenu.includes(key)) {
         return icon?.choose;
       }
       return icon?.default;
@@ -80,7 +80,7 @@ export default defineComponent({
           text-color={LayoutConfig.asideTextColor}
           active-text-color={LayoutConfig.asideActiveTextColor}
         >
-          {MENU_LIST.map(item => {
+          {LayoutConfig.MENU_LIST.map(item => {
             return item.children?.length
               ? renderSubMenu(item)
               : renderMenuItem(item);

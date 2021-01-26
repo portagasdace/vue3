@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import LayoutConfig from "../constant/config";
+import LayoutConfig from "../../../config/layout";
 
 export default defineComponent({
   setup() {

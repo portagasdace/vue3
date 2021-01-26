@@ -1,6 +1,6 @@
 const ROUTER_PATH = {
   PLATFORM: () =>
-    import(/* webpackChunkName: "audience" */ "@/views/Platform/program") // 观众分析
+    import(/* webpackChunkName: "audience" */ "@/views/Platform/Pages/index") // 观众分析
 };
 export default [
   /**

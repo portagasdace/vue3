@@ -5,7 +5,7 @@
  */
 const ROUTER_PATH = {
   OVERVIEW: () =>
-    import(/* webpackChunkName: "audience" */ "@/views/Overview/index") // 观众分析
+    import(/* webpackChunkName: "audience" */ "@/views/Overview/Pages/index") // 观众分析
 };
 export default [
   /**
